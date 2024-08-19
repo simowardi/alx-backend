@@ -2,9 +2,7 @@
 """
 Deletion-resilient hypermedia pagination
 """
-
 import csv
-import math
 from typing import List, Dict
 
 
@@ -57,7 +55,7 @@ class Server:
         data_count = 0
         next_index = None
         start = index if index else 0
-        for i, item in dataset .items():
+        for i, item in dataset.items():
             if i >= start and data_count < page_size:
                 page_data.append(item)
                 data_count += 1
