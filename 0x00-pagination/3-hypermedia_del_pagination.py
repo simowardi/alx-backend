@@ -49,13 +49,13 @@ class Server:
             index(int): first required index
             page_size(int): required number of records per page
         """
-        dataset = self.indexed_dataset()
+        data = self.indexed_dataset()
         assert index is not None and index >= 0 and index <= max(data.keys())
         page_data = []
         data_count = 0
         next_index = None
         start = index if index else 0
-        for i, item in dataset.items():
+        for i, item in data.items():
             if i >= start and data_count < page_size:
                 page_data.append(item)
                 data_count += 1
