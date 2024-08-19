@@ -2,8 +2,8 @@
 """Hypermedia pagination sample.
 """
 import csv
-import math
 from typing import Dict, List, Tuple
+index_range = __import__('0-simple_helper_function').index_range
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
