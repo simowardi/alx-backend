@@ -12,6 +12,7 @@ files (e.g., .po files) for each supported language.
 from flask import Flask, render_template
 from flask_babel import Babel, gettext
 
+
 # Configuration class for Babel (optional)
 class Config(object):
     """
@@ -25,6 +26,7 @@ class Config(object):
 app = Flask(__name__)
 app.config.from_object(Config)  # Load configuration from Config class
 babel = Babel(app)
+
 
 @babel.localeselector
 def get_locale():
