@@ -42,6 +42,7 @@ def get_locale():
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+
 @app.route('/', strict_slashes=False)
 def index():
     """
@@ -53,6 +54,7 @@ def index():
     to mark strings for translation.
     """
     return render_template('1-index.html', title=gettext('Welcome'))
+
 
 if __name__ == "__main__":
     app.run(port="5000", host="0.0.0.0", debug=True)
